@@ -1,0 +1,89 @@
+body {
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #000;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.header__msg-block {
+  background-color: #000;
+  height: 30px;
+}
+.header__msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__msg > a {
+  display: block;
+  color: #fff;
+}
+.header__main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 0;
+}
+.header__main-left {
+  width: 33%;
+}
+.header__main-center {
+  width: 33%;
+  text-align: center;
+}
+.header__main-right {
+  width: 33%;
+  display: flex;
+  justify-content: flex-end;
+}
+.header__menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header__menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.header__menu-btn:not(:last-child) {
+  margin-right: 25px;
+}
+.header__menu-btn:hover {
+  transition: linear 0.23s;
+  background-color: #dfdfdf;
+}
+
+.center {
+  margin: auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .user {
+    display: none;
+  }
+  .favorite {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- title %></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/bea5418cb3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main><%- body %></main>
+    <%- include('../partials/footer.ejs') %>
+    <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".header__msg-block", {
+        autoHeight: true,
+      direction: "vertical",
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+      },
+    });
+  </script>
+</body>
+</html>
