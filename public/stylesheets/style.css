@@ -1,5 +1,7 @@
 body {
   margin: 0 auto;
+  padding-top: 150px;
+  height: 2000px;
 }
 
 a {
@@ -24,6 +26,12 @@ button {
   border: unset;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .container {
   max-width: 1600px;
   margin: 0 auto;
@@ -37,6 +45,8 @@ button {
 .header__msg-block {
   background-color: #000;
   height: 30px;
+  opacity: 1;
+  transition: all 0.3s;
 }
 .header__msg {
   display: flex;
@@ -53,6 +63,12 @@ button {
   justify-content: center;
   align-items: center;
   padding: 17px 0;
+}
+.header__main {
+  background-color: #fff;
+}
+.header__main:hover ~ .header-navigation {
+  margin-top: 0 !important;
 }
 .header__main-left {
   width: 33%;
@@ -90,6 +106,13 @@ button {
 }
 .header-navigation {
   border-top: 1px solid #ddd;
+  transition: all 0.3s;
+  z-index: -1;
+  position: relative;
+  background-color: #fff;
+}
+.header-navigation:hover {
+  margin-top: 0 !important;
 }
 .header-navigation-content {
   padding: 10px 0;

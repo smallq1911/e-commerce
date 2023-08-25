@@ -48,3 +48,24 @@ var cartSidebar = document.getElementById("cart")
 cartSidebar.onclick = function() {
   cartSidebar.classList.remove("cart-show")
 }
+
+window.onscroll = function() {
+  if(window.pageYOffset>40){
+    document.getElementById("msg").style.opacity = 0;
+    document.getElementById("msg").style.height = 0;
+    document.getElementById("msg").style.visibility = "hidden";
+  }else{
+    document.getElementById("msg").style.opacity = 1;
+    document.getElementById("msg").style.height = "30px";
+    document.getElementById("msg").style.visibility = "visible";
+  }
+
+  window.onscroll = function() {
+    if(window.pageYOffset>400){
+      document.getElementById("nav").style.marginTop = "-30px";
+    }else{
+      document.getElementById("nav").style.marginTop = 0;
+    }
+  }
+}
+

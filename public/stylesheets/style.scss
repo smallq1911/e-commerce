@@ -1,6 +1,7 @@
 body{
     margin: 0 auto;
-
+    padding-top: 150px;
+    height: 2000px;
 }
 a{
     text-decoration: none;
@@ -20,6 +21,11 @@ button{
     background-color: unset;
     border: unset;
 }
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 
 .container{
     max-width: 1600px;
@@ -34,6 +40,8 @@ button{
     &__msg-block{
         background-color: #000;
         height: 30px;
+        opacity: 1;
+        transition: all 0.3s;
     }
     &__msg{
         display: flex;
@@ -52,6 +60,10 @@ button{
         padding: 17px 0;
     }
     &__main{
+        background-color: #fff;
+        &:hover~.header-navigation{
+            margin-top: 0!important;
+        }
         &-left{
             width: 33%;
         }
@@ -89,6 +101,13 @@ button{
     }
     &-navigation{
         border-top: 1px solid #ddd;
+        transition: all 0.3s;
+        z-index: -1;
+        position: relative;
+        background-color: #fff;
+        &:hover{
+            margin-top: 0!important;
+        }
         &-content{
             padding: 10px 0;
         }
