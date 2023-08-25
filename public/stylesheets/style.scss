@@ -13,12 +13,20 @@ ul{
     padding: unset;
     margin: unset;
 }
+i{
+    pointer-events: none;
+}
+button{
+    background-color: unset;
+    border: unset;
+}
 
 .container{
     max-width: 1600px;
     margin: 0 auto;
 }
 .show{
+    opacity: 1!important;
     visibility: visible!important;
 }
 
@@ -36,12 +44,14 @@ ul{
             color: #fff;
         }
     }
-    &__main{
+    &-container{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         padding: 17px 0;
+    }
+    &__main{
         &-left{
             width: 33%;
         }
@@ -53,44 +63,6 @@ ul{
             width: 33%;
             display: flex;
             justify-content: flex-end;
-        }
-    }
-    &__nav{
-        width: 33%;
-        height: 100%;
-        background-color: #ddd;
-        position: absolute;
-        z-index: 1;
-        &-wrapper{
-            left: 0;
-            background-color: rgb(0, 0, 0, 0.66);
-            width: 100%;
-            height: 88vh;
-            position: absolute;
-            margin-top: 30px;
-            visibility: hidden;
-        }
-        &-brand{
-            margin-top: 50vh;
-            position: sticky;
-            text-align: right;
-            padding-right: 20px;
-        }
-        &-item{
-            padding: 20px 35px;
-        }
-        &-btn{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 35px;
-            width: 35px;
-            font-size: 18px;
-            cursor: pointer;
-            &:hover{
-                opacity: 0.5;
-                transition: linear 0.23s;
-            }
         }
     }
     &__menu{
@@ -115,12 +87,194 @@ ul{
             }
         }
     }
+    &-navigation{
+        border-top: 1px solid #ddd;
+        &-content{
+            padding: 10px 0;
+        }
+        &-list{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-item{
+            &:after{
+                display: block;
+                content: "";
+                border-bottom: 1px solid;
+                transform: scaleX(0);
+                transition: transform 0.23s ease-in-out;
+            }
+            &:hover::after{
+                transform: scaleX(1);
+            }
+        }
+    }
 }
-.center{
-    margin: auto;
+.notification{
+    &-dropdown{
+        top: 100px;
+        margin-left: 100px;
+        position: absolute;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        width: 250px;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        &-item{
+            padding: 12px 0 12px 20px;
+            &:not(:last-child){
+                border-bottom: 1px solid;
+            }
+            &:hover{
+                background-color: #dddddd;
+            }
+        }
+    }
 }
-@media screen and (max-width: 1000px) {
-    .user{display: none;}
-    .favorite{display: none;}
-    .search{display: none;}
+.favorite{
+    &-modal{
+        position: fixed;
+        background-color: rgb(0, 0, 0, 0.4);
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+        &-dialog{
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 30px;
+            width: 66%;
+        }
+        &-close{
+            float: right;
+            background-color: unset;
+            border: none;
+            pointer-events: auto;
+            &:hover{
+                color: #e60000;
+                transition: linear 0.3s;
+            }
+        }
+    } 
+}
+.search{
+    &-show{
+        opacity: 1!important;
+        scale: 1!important;
+        visibility: visible!important;
+    }
+    &-wrapper{
+        border-top: 1px solid #ddd;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 100px;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        opacity: 0;
+        scale: 0.8;
+        transition: all 1s;
+        visibility: hidden;
+    }
+    &-content{
+        padding: 50px 150px;
+    }
+    &-recommend{
+        padding-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        &-item{
+            padding: 5px;
+            border: 1px solid transparent;
+            transition: linear 0.23s;
+            & a{
+                color: #707070;
+            }
+            &:not(:first-child){
+                margin-left: 2%;
+            }
+            &:hover{
+                border: 1px solid;
+                & a{
+                    color: #000;
+                }
+            }
+        }
+    }
+    &-input{
+        width: 85%;
+        height: 40px;
+    }
+    &-submit{
+        background-color: #dddddd;
+        text-align: center;
+        height: 40px;
+        width: 13%;
+        margin-left: 20px;
+    }
+}
+.cart{
+    &-close{
+        float: right;
+    }
+    &-sidebar{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0, 0.4);
+        position: fixed;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+    }
+    &-wrapper{
+        width: 0%;
+        height: 100%;
+        background-color: #fff;
+        right: 0;
+        position: fixed;
+        transition: all 0.3s;
+    }
+    &-content{
+        padding: 50px 30px;
+    }
+    &-show{
+        visibility: visible!important;
+        opacity: 1!important;
+        & .cart-wrapper{
+            width: 25%!important;
+        }
+    }
+}
+.nav{
+    &-dropdown{
+        &-btn{
+            &:hover .nav-dropdown-menu{
+                visibility: visible;
+                opacity: 1;
+                margin-top: 10px;
+            }
+        }
+        &-menu{
+            margin-top: 30px;
+            margin-left: -15px;
+            display: block;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            width: 200px;
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            &-item{
+                padding: 7px 15px;
+            }
+        }
+    }
 }

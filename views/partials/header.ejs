@@ -12,20 +12,10 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="header__main">
+        <div class="header__main">
+            <div class="container header-container">
                 <div class="header__main-left">
-                    <div class="header__nav-btn toggle-btn" onclick="showToggle()"><i class="fa fa-bars" aria-hidden="true"></i></div>
-                    <div class="header__nav-wrapper" id="toggle">
-                        <ul class="header__nav">
-                            <li class="header__nav-item">Navigation 1</li>
-                            <li class="header__nav-item">Navigation 1</li>
-                            <li class="header__nav-item">Navigation 1</li>
-                            <li class="header__nav-item">Navigation 1</li>
-                            <li class="header__nav-item">Navigation 1</li>
-                            <div class="header__nav-brand">Brand name here</div>
-                        </ul>
-                    </div>
+                    left
                 </div>
                 <div class="header__main-center">
                     <div class="header__logo">
@@ -36,13 +26,93 @@
                 </div>
                 <div class="header__main-right">
                     <ul class="header__menu">
-                        <li class="header__menu-btn search"><i class="fa-solid fa-magnifying-glass"></i></li>
-                        <li class="header__menu-btn cart"><i class="fa-solid fa-cart-shopping"></i></li>
-                        <li class="header__menu-btn favorite"><i class="fa-solid fa-heart"></i></li>
-                        <li class="header__menu-btn notification"><i class="fa-solid fa-bell"></i></li>
+                        <li class="header__menu-btn search">
+                            <button class="search-btn" onclick="ShowSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <div class="search-wrapper" id="searchForm">
+                                <div class="search-content">
+                                    <form action="" method="get" class="search-form">
+                                        <ul class="search-recommend">
+                                            <li class="search-recommend-item"><a href="">Recommend</a></li>
+                                            <li class="search-recommend-item"><a href="">Recommend</a></li>
+                                            <li class="search-recommend-item"><a href="">Recommend</a></li>
+                                        </ul>
+                                        <input type="text" name="" id="" class="search-input">
+                                        <button type="submit" class="search-submit">Search</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__menu-btn notification">
+                            <button class="notification-btn" onclick="ShowToggle()"><i class="fa-solid fa-bell"></i></button>
+                            <ul class="notification-dropdown" id="toggle">
+                                <li class="notification-dropdown-item"><a href="">Notification 1</a></li>
+                                <li class="notification-dropdown-item"><a href="">Notification 1</a></li>
+                                <li class="notification-dropdown-item"><a href="">Notification 1</a></li>   
+                            </ul>
+                        </li>
+                        <li class="header__menu-btn cart">
+                            <button class="cart-btn" onclick="ShowCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                            <div class="cart-sidebar" id="cart">
+                                <div class="cart-wrapper">
+                                    <div class="cart-content">
+                                        <div class="cart-header">
+                                            <button class="cart-close"><i class="fa fa-times" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="cart-title">Your Cart</div>
+                                        </div>
+                                        <div class="cart-body">
+                                            <ul class="cart-list">
+                                                <li class="cart-list-item"><a href="">Item</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="cart-footer">
+                                            <div class="cart-total"></div>
+                                            <button type="submit" class="cart-checkout">Checkout</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__menu-btn favorite">
+                            <button class="favorite-btn" onclick="ShowFavorite()"><i class="fa-solid fa-heart"></i></button>
+                            <div class="favorite-modal" id="modal">
+                                <div class="favorite-modal-dialog">
+                                    <div class="favorite-modal-content">
+                                        <div class="favorite-modal-header">
+                                            <button class="favorite-modal-close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                            <div class="favorite-modal-title">Modal Title</div>
+                                        </div>
+                                        <div class="favorite-modal-body">
+                                            Modal body
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                         <li class="header__menu-btn user"><i class="fa-solid fa-user"></i></li>
                     </ul>
                 </div>
+            </div>
+        </div>
+        <div class="header-navigation">
+            <div class="container header-navigation-container">
+                <nav class="header-navigation-content">
+                    <ul class="header-navigation-list">
+                        <li class="header-navigation-item"><a href="">Item</a></li>
+                        <li class="header-navigation-dropdown nav-dropdown-btn">
+                            <a href="">Item</a>
+                            <ul class="nav-dropdown-menu">
+                                <li class="nav-dropdown-menu-item">item</li>
+                                <li class="nav-dropdown-menu-item">item</li>
+                                <li class="nav-dropdown-menu-item">item</li>
+                            </ul>
+                        </li>
+                        <li class="header-navigation-item"><a href="">Item</a></li>
+                        <li class="header-navigation-item"><a href="">Item</a></li>
+                        <li class="header-navigation-item"><a href="">Item</a></li>
+                        <li class="header-navigation-item"><a href="">Item</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
 </header>
