@@ -24,6 +24,7 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 99;
 }
 
 .container{
@@ -336,6 +337,7 @@ header{
             }
         }
         &-menu{
+            background-color: #fff;
             margin-top: 30px;
             margin-left: -15px;
             display: block;
@@ -350,4 +352,41 @@ header{
             }
         }
     }
+}
+.home{
+    &-banner{
+        
+        &-media{
+            position: relative;
+            & video{
+                width: 100%;
+            }
+        }
+        &-content{
+            &-wrapper{
+                position: absolute;
+                left: 50%;
+            }
+        }
+        &-btn{
+            position: relative;
+            left: -50%;
+            margin-top: -200px;
+            padding: 7px;
+            transition: all 0.5s;
+            background-color: #fff;
+            background-image: linear-gradient(#000, #000);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            transition: background-size .5s, color .5s;
+            &:hover{
+                background-size: 100% 100%;
+                & a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    
 }

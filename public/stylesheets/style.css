@@ -29,6 +29,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 99;
 }
 
 .container {
@@ -325,6 +326,7 @@ header {
   margin-top: 10px;
 }
 .nav-dropdown-menu {
+  background-color: #fff;
   margin-top: 30px;
   margin-left: -15px;
   display: block;
@@ -337,6 +339,36 @@ header {
 }
 .nav-dropdown-menu-item {
   padding: 7px 15px;
+}
+
+.home-banner-media {
+  position: relative;
+}
+.home-banner-media video {
+  width: 100%;
+}
+.home-banner-content-wrapper {
+  position: absolute;
+  left: 50%;
+}
+.home-banner-btn {
+  position: relative;
+  left: -50%;
+  margin-top: -200px;
+  padding: 7px;
+  transition: all 0.5s;
+  background-color: #fff;
+  background-image: linear-gradient(#000, #000);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 0.5s, color 0.5s;
+}
+.home-banner-btn:hover {
+  background-size: 100% 100%;
+}
+.home-banner-btn:hover a {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
