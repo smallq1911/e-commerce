@@ -59,16 +59,16 @@ window.onscroll = function() {
     document.getElementById("msg").style.opacity = 0;
     document.getElementById("msg").style.height = 0;
     document.getElementById("msg").style.visibility = "hidden";
+    document.getElementById("searchForm").style.marginTop = "-30px";
+    document.getElementById("toggle").style.marginTop = "-30px";
+    document.getElementById("nav").style.marginTop = "-30px";
   }else{
     document.getElementById("msg").style.opacity = 1;
     document.getElementById("msg").style.height = "30px";
     document.getElementById("msg").style.visibility = "visible";
-  }
-
-  if(window.pageYOffset>400){
-    document.getElementById("nav").style.marginTop = "-30px";
-  }else{
-    document.getElementById("nav").style.marginTop = 0;
+    document.getElementById("searchForm").style.marginTop = "0";
+    document.getElementById("toggle").style.marginTop = "0";
+    document.getElementById("nav").style.marginTop = "0";
   }
 }
 

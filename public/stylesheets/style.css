@@ -1,7 +1,6 @@
 body {
   margin: 0 auto;
   padding-top: 150px;
-  height: 2000px;
 }
 
 a {
@@ -131,6 +130,55 @@ header {
 }
 .header-navigation-item:hover::after {
   transform: scaleX(1);
+}
+
+.footer {
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+}
+.footer-main {
+  padding: 100px 0;
+}
+.footer-sub {
+  background-color: #dfdfdf;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.footer-brand {
+  width: 60%;
+}
+.footer-link {
+  width: 20%;
+  text-align: right;
+}
+.footer-link a:hover {
+  font-weight: bold;
+}
+.footer-content {
+  display: flex;
+}
+.footer-left {
+  width: 50%;
+}
+.footer-right {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.footer-widget {
+  width: 25%;
+}
+.footer-menu li {
+  height: 50px;
+}
+.footer-menu-item a:hover {
+  font-weight: bold;
+}
+.footer-title {
+  padding-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .notification-dropdown {

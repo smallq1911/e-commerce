@@ -1,7 +1,6 @@
 body{
     margin: 0 auto;
     padding-top: 150px;
-    height: 2000px;
 }
 a{
     text-decoration: none;
@@ -131,6 +130,60 @@ header{
         }
     }
 }
+.footer{
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    &-main{
+        padding: 100px 0;
+    }
+    &-sub{
+        background-color: #dfdfdf;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+    &-brand{
+        width: 60%;
+    }
+    &-link{
+        width: 20%;
+        text-align: right;
+        & a:hover{
+            font-weight: bold;
+        }
+    }
+    &-content{
+        display: flex;
+    }
+    &-left{
+        width: 50%;
+    }
+    &-right{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    &-widget{
+        width: 25%;      
+    }
+    &-menu{
+        & li{
+            height: 50px;
+        }
+        &-item{
+            & a:hover{
+                font-weight: bold;
+            }
+        }
+    }
+    
+    &-title{
+        padding-bottom: 30px;
+        text-transform: uppercase;
+    }
+}
+
 .notification{
     &-dropdown{
         top: 100px;
