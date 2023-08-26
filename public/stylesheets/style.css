@@ -136,6 +136,7 @@ header {
 .footer {
   border-top: 1px solid #ddd;
   font-size: 14px;
+  margin-top: 50px;
 }
 .footer-main {
   padding: 100px 0;
@@ -369,6 +370,123 @@ header {
 }
 .home-banner-btn:hover a {
   color: #fff;
+}
+
+.section {
+  margin-top: 50px;
+}
+.section-title {
+  text-align: center;
+}
+.section-content {
+  padding-top: 50px;
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.feature-list-item {
+  width: 25%;
+  height: 100%;
+}
+.feature-list-item a {
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+}
+.feature-list-item:hover #back {
+  opacity: 1;
+}
+.feature-list-item:hover #front {
+  opacity: 0;
+}
+
+.product__img {
+  width: 100%;
+  transition: linear 0.23s;
+}
+.product__img-box {
+  position: relative;
+}
+.product__img-box #back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.product__img-box #front {
+  z-index: 1;
+  position: relative;
+}
+.product__color {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+.product__color-option {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+}
+.product__color-option:not(:last-child) {
+  margin-right: 7px;
+}
+
+.split-banner {
+  display: flex;
+  justify-content: space-between;
+}
+.split-banner-item {
+  width: 49.5%;
+}
+.split-banner-background {
+  filter: brightness(0.6);
+}
+.split-banner-background img {
+  width: 100%;
+}
+.split-banner-content {
+  position: relative;
+  z-index: 1;
+  top: -150px;
+  left: 100px;
+}
+.split-banner-title {
+  color: #fff;
+}
+.split-banner-btn {
+  margin-top: 15px;
+}
+.split-banner-btn a {
+  padding: 6px 20px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 30px;
+  transition: linear 0.23s;
+}
+.split-banner-btn a:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+.recommend-list-wrapper {
+  height: 400px;
+}
+.recommend-list-item {
+  height: 100%;
+}
+.recommend-list-item a {
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+}
+.recommend-list-item:hover #back {
+  opacity: 1;
+}
+.recommend-list-item:hover #front {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

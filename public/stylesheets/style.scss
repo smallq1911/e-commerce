@@ -134,6 +134,7 @@ header{
 .footer{
     border-top: 1px solid #ddd;
     font-size: 14px;
+    margin-top: 50px;
     &-main{
         padding: 100px 0;
     }
@@ -389,4 +390,124 @@ header{
         }
     }
     
+}
+.section{
+    margin-top: 50px;
+    &-title{
+        text-align: center;
+    }
+    &-content{
+        padding-top: 50px;
+    }
+}
+.feature-list{
+    display: flex;
+    flex-wrap: wrap;
+    &-item{
+        width: 25%;
+        height: 100%;
+        & a{
+            width: 85%;
+            display: block;
+            margin: 0 auto;
+        }
+        &:hover{
+            & #back{
+                opacity: 1;
+            }
+            & #front{
+                opacity: 0;
+            }
+        }
+    }
+}
+.product{
+    &__img{
+        width: 100%;
+        transition: linear 0.23s;
+        &-box{
+            position: relative;
+            & #back{
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
+            & #front{
+                z-index: 1;
+                position: relative;
+            }
+        }
+    }
+    &__color{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        padding-bottom: 10px;
+        &-option{
+            width: 10px;
+            height: 10px;
+            background-color: #000;
+            &:not(:last-child){
+                margin-right: 7px;
+            }
+        }
+    }
+}
+.split-banner{
+    display: flex;
+    justify-content: space-between;
+    &-item{
+        width: 49.5%;
+    }
+    &-background{
+        & img{
+            width: 100%;
+        }
+        filter: brightness(0.6);
+    }
+    &-content{
+        position: relative;
+        z-index: 1;
+        top: -150px;
+        left: 100px; 
+    }
+    &-title{
+        color: #fff;
+    }
+    &-btn{
+        margin-top: 15px;
+        & a{
+            padding: 6px 20px;
+            background-color: #111;
+            color: #fff;
+            border-radius: 30px;
+            transition: linear 0.23s;
+            &:hover{
+                background-color: #fff;
+                color: #111;
+            }
+        }
+    }
+}
+.recommend-list{
+    &-wrapper{
+        height: 400px;
+    }
+    &-item{
+        height: 100%;
+        & a{
+            width: 85%;
+            display: block;
+            margin: 0 auto;
+        }
+        &:hover{
+            & #back{
+                opacity: 1;
+            }
+            & #front{
+                opacity: 0;
+            }
+        }
+    }
 }

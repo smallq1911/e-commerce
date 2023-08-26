@@ -7,6 +7,12 @@ var swiper = new Swiper(".header__msg-block", {
     disableOnInteraction: true,
   },
 });
+var swiper = new Swiper(".recommend-list", {
+  autoHeight:true,
+  spaceBetween: 0,
+  grabCursor: true,
+  slidesPerView: 4
+});
 
 // Toggle show dropdown
 function ShowToggle() {
