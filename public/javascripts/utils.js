@@ -7,12 +7,21 @@ var swiper = new Swiper(".header__msg-block", {
     disableOnInteraction: true,
   },
 });
-var swiper = new Swiper(".recommend-list", {
-  autoHeight:true,
-  spaceBetween: 0,
-  grabCursor: true,
-  slidesPerView: 4
-});
+if(window.width > 1000){
+  var swiper = new Swiper(".recommend-list", {
+    autoHeight:true,
+    spaceBetween: 0,
+    grabCursor: true,
+    slidesPerView: 4
+  });
+}else{
+  var swiper = new Swiper(".recommend-list", {
+    autoHeight:true,
+    spaceBetween: 0,
+    grabCursor: true,
+    slidesPerView: 2
+  });
+}
 
 // Toggle show dropdown
 function ShowToggle() {
@@ -28,6 +37,9 @@ function ShowSearch() {
 }
 function ShowCart() {
   document.getElementById("cart").classList.toggle("cart-show")
+}
+function ShowMNav() {
+  document.getElementById("mNav").classList.toggle("header-navigation-mobile-show")
 }
 
 window.onclick = function(event) {
@@ -54,11 +66,14 @@ var cartSidebar = document.getElementById("cart")
 cartSidebar.onclick = function() {
   cartSidebar.classList.remove("cart-show")
 }
-window.onscroll = function() {
-  
+var mNavSidebar = document.getElementById("mNav")
+mNavSidebar.onclick = function() {
+  mNavSidebar.classList.remove("header-navigation-mobile-show")
 }
-
-
+var mCollapseBtn = document.getElementById("mCollapseBtn")
+mCollapseBtn.onclick = function() {
+  document.getElementById("mCollapse").classList.toggle("header-navigation-mobile-collapse-show")
+}
 
 window.onscroll = function() {
   if(window.pageYOffset>40){

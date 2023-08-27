@@ -28,8 +28,8 @@ button {
 header {
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 99;
+  width: 100%;
 }
 
 .container {
@@ -73,6 +73,7 @@ header {
 }
 .header__main-left {
   width: 33%;
+  visibility: hidden;
 }
 .header__main-center {
   width: 33%;
@@ -131,6 +132,65 @@ header {
 }
 .header-navigation-item:hover::after {
   transform: scaleX(1);
+}
+.header-navigation-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  font-size: 18px;
+  transition: opacity 0.23s;
+}
+.header-navigation-btn:hover {
+  opacity: 0.5;
+}
+.header-navigation-mobile-item {
+  padding: 12px 0;
+  padding-left: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.header-navigation-mobile-collapse {
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.23s;
+}
+.header-navigation-mobile-collapse-item {
+  padding: 7px 0;
+  padding-left: 12px;
+}
+.header-navigation-mobile-collapse-show {
+  height: fit-content;
+  visibility: visible;
+  opacity: 1;
+}
+.header-navigation-mobile-sidebar {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: 1;
+}
+.header-navigation-mobile-wrapper {
+  width: 0%;
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+  transition: all 0.3s;
+}
+.header-navigation-mobile-show {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.header-navigation-mobile-show .header-navigation-mobile-wrapper {
+  width: 45% !important;
 }
 
 .footer {
@@ -487,6 +547,44 @@ header {
 }
 .recommend-list-item:hover #front {
   opacity: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative;
+    padding-top: 100px;
+  }
+  .container {
+    margin: 0 auto;
+  }
+  .header__main-left {
+    visibility: visible;
+  }
+  .notification, .favorite, .user, #nav {
+    display: none;
+  }
+  .home-banner-btn {
+    margin-top: -100px;
+  }
+  .feature-list-item {
+    width: 50%;
+  }
+  .footer-sub {
+    display: none;
+  }
+  .footer-content {
+    display: block;
+  }
+  .footer-left {
+    width: 100%;
+  }
+  .footer-right {
+    width: 100%;
+    margin-top: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

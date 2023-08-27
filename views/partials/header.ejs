@@ -15,7 +15,25 @@
         <div class="header__main">
             <div class="container header-container">
                 <div class="header__main-left">
-                    left
+                    <button class="header-navigation-btn" onclick="ShowMNav()"><i class="fa-solid fa-bars"></i></button>
+                    <div class="header-navigation-mobile-sidebar" id="mNav">
+                        <nav class="header-navigation-mobile-wrapper">
+                            <ul class="header-navigation-mobile-list">
+                                <li class="header-navigation-mobile-item"><a href="">Item</a></li>
+                                <li class="header-navigation-mobile-item" id="mCollapseBtn">
+                                    <button>Item<i class="fa-solid fa-chevron-down"></i></button>
+                                    <ul class="header-navigation-mobile-collapse" id="mCollapse">
+                                        <li class="header-navigation-mobile-collapse-item"><a href="">sub item</a></li>
+                                        <li class="header-navigation-mobile-collapse-item"><a href="">sub item</a></li>
+                                        <li class="header-navigation-mobile-collapse-item"><a href="">sub item</a></li>
+                                        <li class="header-navigation-mobile-collapse-item"><a href="">sub item</a></li>
+                                        <li class="header-navigation-mobile-collapse-item"><a href="">sub item</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header-navigation-mobile-item"><a href="">Item</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
                 <div class="header__main-center">
                     <div class="header__logo">
