@@ -7,7 +7,8 @@ var swiper = new Swiper(".header__msg-block", {
     disableOnInteraction: true,
   },
 });
-if(window.width > 1000){
+
+if(window.innerWidth > 1000){
   var swiper = new Swiper(".recommend-list", {
     autoHeight:true,
     spaceBetween: 0,
@@ -21,6 +22,24 @@ if(window.width > 1000){
     grabCursor: true,
     slidesPerView: 2
   });
+}
+
+window.onresize = function() {
+  if(window.innerWidth > 1000){
+    var swiper = new Swiper(".recommend-list", {
+      autoHeight:true,
+      spaceBetween: 0,
+      grabCursor: true,
+      slidesPerView: 4
+    });
+  }else{
+    var swiper = new Swiper(".recommend-list", {
+      autoHeight:true,
+      spaceBetween: 0,
+      grabCursor: true,
+      slidesPerView: 2
+    });
+  }
 }
 
 // Toggle show dropdown
@@ -49,23 +68,34 @@ window.onclick = function(event) {
       dropdown.classList.remove('show');
     }
   }
+  
   if (!event.target.matches('.search-btn')) {
-    let dropdown = document.getElementById("searchForm");
-    if (dropdown.classList.contains('search-show')) {
-      dropdown.classList.remove('search-show');
+    let searchForm = document.getElementById("searchForm");
+    if(event.target.matches(".search-content") || event.target.matches(".search-input") || event.target.matches(".search-recommend")){
+      return false
+    }
+    if (searchForm.classList.contains('search-show')) { 
+      searchForm.classList.remove('search-show');
     }
   }
 }
 
 var favoriteModal = document.getElementById("modal")
 favoriteModal.onclick = function() {
-  favoriteModal.classList.remove("show")
+  if(event.target.matches("#modal")){
+    favoriteModal.classList.remove("show")
+
+  }
 }
 
 var cartSidebar = document.getElementById("cart")
-cartSidebar.onclick = function() {
-  cartSidebar.classList.remove("cart-show")
+cartSidebar.onclick = function(event) {
+  if(event.target.matches("#cart")){
+    cartSidebar.classList.remove("cart-show")
+
+  }
 }
+
 var mNavSidebar = document.getElementById("mNav")
 mNavSidebar.onclick = function() {
   mNavSidebar.classList.remove("header-navigation-mobile-show")
