@@ -200,6 +200,8 @@ header{
     margin-top: 50px;
     background-color: #111;
     color: #fff;
+    z-index: 1;
+    position: relative;
     &-main{
         padding: 100px 0;
     }
@@ -480,14 +482,6 @@ header{
             display: block;
             margin: 0 auto;
         }
-        &:hover{
-            & #back{
-                opacity: 1;
-            }
-            & #front{
-                opacity: 0;
-            }
-        }
     }
 }
 .product{
@@ -506,7 +500,16 @@ header{
                 z-index: 1;
                 position: relative;
             }
+            &:hover{
+                & #back{
+                    opacity: 1;
+                }
+                & #front{
+                    opacity: 0;
+                }
+            }
         }
+        
     }
     &__color{
         display: flex;
@@ -644,6 +647,9 @@ header{
         align-items: center;
         padding-left: 100px;
         justify-content: space-between;
+        &__hide-filter{
+            padding-left: 0;
+        }
     }
     &-function{
         display: flex;
@@ -653,22 +659,42 @@ header{
             }
         }
     }
+    &-filter{
+        display: block;
+        &-trigger{
+            cursor: pointer;
+        }
+        &-category{
+            display: none;
+            &-show{
+                display: block;
+            }
+        }
+        &-hide{
+            display: none;
+        }
+    }
     &-list{
         display: flex;
     }
     &-left{
         width: 12%;
-        height: 1000px;
         position: absolute;
         top: 220px;
         left: 0;
         background-color: #fff;
-        z-index: -1;
+        padding: 12px 0;
         padding-left: 17px;
     }
     &-right{
         width: 100%;
         padding-left: 100px;
+        &__hide-filter{
+            padding-left: 0;
+            & .shop-list-item{
+                width: 25%;
+            }
+        }
     }
     &-list{
         display: flex;
@@ -676,6 +702,9 @@ header{
         &-item{
             width: 33%;
             padding: 25px;
+            &__hide-filter{
+                width: 25%;
+            }
         }
     }
 }

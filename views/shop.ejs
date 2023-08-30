@@ -2,18 +2,22 @@
     <%- include('partials/path.ejs') %>
     <section class="shop">
         <div class="container">
-            <div class="shop-top">
+            <div class="shop-top" id="shopTitle">
                 <h2 class="shop-title">Title</h2>
                 <ul class="shop-function">
-                    <li class="shop-function-item">Hide</li>
-                    <li class="shop-function-item">Sort by</li>
+                    <li class="shop-function-item"><button href="" id="filterBtn" onclick="ToggleFilter()">Hide Filter</button></li>
+                    <li class="shop-function-item">
+                      <label for="">Sort by</label>
+                      <select name="" id="">
+                        <option value="">option sort</option>
+                        <option value="">option sort</option>
+                        <option value="">option sort</option>
+                      </select>
+                    </li>
                 </ul>
             </div>
             <div class="shop-list">
-                <div class="shop-left" id="productFilter">
-                    <div class="shop-filter">left</div>
-                </div>
-                <div class="shop-right">
+                <div class="shop-right" id="shopList">
                     <ul class="shop-list">
                         <li class="shop-list-item">
                             <a href="">
@@ -79,5 +83,26 @@
                 </div>
             </div>
         </div>
+        <div class="shop-left" id="productFilter">
+          <div class="shop-filter">
+            <ul class="shop-filter-wrapper">
+              <li class="shop-filter-item">
+                <a class="shop-filter-trigger" onclick="ToggleCollapse()">
+                  <h5 class="shop-filter-category-title">Title</h5>
+                </a>
+                <ul class="shop-filter-category" id="collapseOptions">
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">option label</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">option label</label>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+      </div>
     </section>
 </body>

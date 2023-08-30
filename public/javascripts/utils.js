@@ -60,6 +60,15 @@ function ShowCart() {
 function ShowMNav() {
   document.getElementById("mNav").classList.toggle("header-navigation-mobile-show")
 }
+function ToggleCollapse() {
+  document.getElementById("collapseOptions").classList.toggle("shop-filter-category-show")
+}
+function ToggleFilter() {
+  document.getElementById("productFilter").classList.toggle("shop-filter-hide")
+  document.getElementById("shopTitle").classList.toggle("shop-top__hide-filter")
+  document.getElementById("shopList").classList.toggle("shop-right__hide-filter")
+  document.getElementsByClassName(".shop-list-item").classList.toggle("shop-list-item__hide-filter")
+}
 
 window.onclick = function(event) {
   if (!event.target.matches('.notification-btn')) {
@@ -134,4 +143,3 @@ window.onscroll = function() {
     document.getElementById("productFilter").style.top = "220px";
   }
 }
-
