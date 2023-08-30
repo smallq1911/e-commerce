@@ -106,20 +106,32 @@ mCollapseBtn.onclick = function() {
 }
 
 window.onscroll = function() {
-  if(window.pageYOffset>40){
-    document.getElementById("msg").style.opacity = 0;
-    document.getElementById("msg").style.height = 0;
-    document.getElementById("msg").style.visibility = "hidden";
-    document.getElementById("searchForm").style.marginTop = "-30px";
-    document.getElementById("toggle").style.marginTop = "-30px";
-    document.getElementById("nav").style.marginTop = "-30px";
-  }else{
+  if(window.pageYOffset < 40){
     document.getElementById("msg").style.opacity = 1;
     document.getElementById("msg").style.height = "30px";
     document.getElementById("msg").style.visibility = "visible";
     document.getElementById("searchForm").style.marginTop = "0";
     document.getElementById("toggle").style.marginTop = "0";
     document.getElementById("nav").style.marginTop = "0";
+    
+  }
+  if(window.pageYOffset > 40){
+    document.getElementById("msg").style.opacity = 0;
+    document.getElementById("msg").style.height = 0;
+    document.getElementById("msg").style.visibility = "hidden";
+    document.getElementById("searchForm").style.marginTop = "-30px";
+    document.getElementById("toggle").style.marginTop = "-30px";
+    document.getElementById("nav").style.marginTop = "-30px";
+    
+  }
+
+  if(window.pageYOffset>135){
+    document.getElementById("productFilter").style.position = "fixed";
+    document.getElementById("productFilter").style.top = "85px";
+  }
+  if(window.pageYOffset<135){
+    document.getElementById("productFilter").style.position = "absolute";
+    document.getElementById("productFilter").style.top = "220px";
   }
 }
 
