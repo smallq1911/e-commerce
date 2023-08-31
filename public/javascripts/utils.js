@@ -42,6 +42,19 @@ window.onresize = function() {
   }
 }
 
+var swiper = new Swiper(".product-detail-img-slider", {
+  autoHeight:true,
+  direction: "vertical",
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
 // Toggle show dropdown
 function ShowToggle() {
     document.getElementById("toggle").classList.toggle("show")
@@ -133,7 +146,6 @@ window.onscroll = function() {
     document.getElementById("nav").style.marginTop = "-30px";
     
   }
-  console.log(window.pageYOffset)
   var productFilter = document.getElementById("productFilter")
   if(window.pageYOffset>135){
     productFilter.style.position = "fixed";

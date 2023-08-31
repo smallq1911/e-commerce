@@ -677,4 +677,27 @@ header {
   width: 25%;
 }
 
+.product-detail {
+  margin-top: 50px;
+}
+.product-detail-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.product-detail-img-slider {
+  width: 700px;
+  height: 1000px;
+  margin: unset;
+}
+.product-detail-img-item > img {
+  width: 100%;
+}
+.product-detail-img-pagination.swiper-pagination-bullets {
+  top: 30px;
+  left: 0;
+}
+.product-detail-information {
+  width: 500px;
+}
+
 /*# sourceMappingURL=style.css.map */

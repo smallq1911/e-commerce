@@ -711,3 +711,28 @@ header{
         }
     }
 }
+.product-detail{
+    margin-top: 50px;
+    &-wrapper{
+        display: flex;
+        justify-content: center;
+        
+    }
+    &-img{
+        &-slider{
+            width: 700px;
+            height: 1000px;
+            margin: unset;
+        }
+        &-item > img{
+            width: 100%;
+        }
+        &-pagination.swiper-pagination-bullets{
+            top: 30px;
+            left: 0;
+        }
+    }
+    &-information{
+        width: 500px;
+    }
+}
