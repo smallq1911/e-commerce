@@ -87,17 +87,189 @@
           <div class="shop-filter">
             <ul class="shop-filter-wrapper">
               <li class="shop-filter-item">
-                <a class="shop-filter-trigger" onclick="ToggleCollapse()">
-                  <h5 class="shop-filter-category-title">Title</h5>
-                </a>
-                <ul class="shop-filter-category" id="collapseOptions">
+                <button class="shop-filter-trigger" onclick="ToggleCollapse('specialOptions')">
+                  <h5 class="shop-filter-category-title">Special & Offers</h5>
+                </button>
+                <ul class="shop-filter-category" id="specialOptions">
                   <li class="shop-filter-option">
                     <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
-                    <label for="" class="shop-filter-option-label">option label</label>
+                    <label for="" class="shop-filter-option-label">New Arrival</label>
                   </li>
                   <li class="shop-filter-option">
                     <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
-                    <label for="" class="shop-filter-option-label">option label</label>
+                    <label for="" class="shop-filter-option-label">Sale-off</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Buy 1 Get 1 Free</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="shop-filter-item">
+                <button class="shop-filter-trigger" onclick="ToggleCollapse('priceOptions')">
+                  <h5 class="shop-filter-category-title">Shop by Price</h5>
+                </button>
+                <ul class="shop-filter-category" id="priceOptions">
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Under 500.000đ</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">500.000đ - 1.000.000đ</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Over 1.000.000đ</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="shop-filter-item">
+                <button class="shop-filter-trigger" onclick="ToggleCollapse('collectionOptions')">
+                  <h5 class="shop-filter-category-title">Collection</h5>
+                </button>
+                <ul class="shop-filter-category" id="collectionOptions">
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Collection name</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Collection name</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Collection name</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="shop-filter-item">
+                <button class="shop-filter-trigger" onclick="ToggleCollapse('topwearOptions')">
+                  <h5 class="shop-filter-category-title">Topwear</h5>
+                </button>
+                <ul class="shop-filter-category" id="topwearOptions">
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Shirts</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">T-shirts</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Tanktops</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Jackets</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Hoodies</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="shop-filter-item">
+                <button class="shop-filter-trigger" onclick="ToggleCollapse('bottomwearOptions')">
+                  <h5 class="shop-filter-category-title">Bottomwear</h5>
+                </button>
+                <ul class="shop-filter-category" id="bottomwearOptions">
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Shorts</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Trousers</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Joggers</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Jeans</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="shop-filter-item">
+                <button class="shop-filter-trigger" onclick="ToggleCollapse('accessoriesOptions')">
+                  <h5 class="shop-filter-category-title">Accessories</h5>
+                </button>
+                <ul class="shop-filter-category" id="accessoriesOptions">
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Socks</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Bags</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Wallets & Purses</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Hats & Caps</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="shop-filter-item">
+                <button class="shop-filter-trigger" onclick="ToggleCollapse('shoesOptions')">
+                  <h5 class="shop-filter-category-title">Shoes</h5>
+                </button>
+                <ul class="shop-filter-category" id="shoesOptions">
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Sandals</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Slides</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Sneakers</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="shop-filter-item">
+                <button class="shop-filter-trigger" onclick="ToggleCollapse('colorOptions')">
+                  <h5 class="shop-filter-category-title">Colors</h5>
+                </button>
+                <ul class="shop-filter-category" id="colorOptions">
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Color</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Color</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Color</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="shop-filter-item">
+                <button class="shop-filter-trigger" onclick="ToggleCollapse('sizeOptions')">
+                  <h5 class="shop-filter-category-title">Sizes</h5>
+                </button>
+                <ul class="shop-filter-category" id="sizeOptions">
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Size</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Size</label>
+                  </li>
+                  <li class="shop-filter-option">
+                    <input type="checkbox" name="" id="" class="shop-filter-option-checkbox">
+                    <label for="" class="shop-filter-option-label">Size</label>
                   </li>
                 </ul>
               </li>
