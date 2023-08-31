@@ -1,11 +1,11 @@
+<%- include('partials/path.ejs') %>
 <body>
-    <%- include('partials/path.ejs') %>
-    <section class="shop">
+    <main class="shop">
         <div class="container">
-            <div class="shop-top" id="shopTitle">
+            <div class="shop-top" id="shopHeader">
                 <h2 class="shop-title">Title</h2>
                 <ul class="shop-function">
-                    <li class="shop-function-item"><button href="" id="filterBtn" onclick="ToggleFilter()">Hide Filter</button></li>
+                    <li class="shop-function-item"><button href="" id="toggleFilterBtn" onclick="ToggleShowHide('productFilter','shop-filter-hide')">Hide Filter</button></li>
                     <li class="shop-function-item">
                       <label for="">Sort by</label>
                       <select name="" id="">
@@ -276,5 +276,6 @@
             </ul>
           </div>
       </div>
-    </section>
-</body>
+    </main>
+    <script src="/javascripts/shop.js"></script>
+  </body>

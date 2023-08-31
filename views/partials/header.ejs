@@ -15,13 +15,13 @@
         <div class="header__main">
             <div class="container header-container">
                 <div class="header__main-left">
-                    <button class="header-navigation-btn" onclick="ShowMNav()"><i class="fa-solid fa-bars"></i></button>
+                    <button class="header-navigation-btn" onclick="ToggleShowHide('mNav', 'header-navigation-mobile-show')"><i class="fa-solid fa-bars"></i></button>
                     <div class="header-navigation-mobile-sidebar" id="mNav">
                         <nav class="header-navigation-mobile-wrapper">
                             <ul class="header-navigation-mobile-list">
                                 <li class="header-navigation-mobile-item"><a href="">Item</a></li>
-                                <li class="header-navigation-mobile-item" id="mCollapseBtn">
-                                    <button>Item<i class="fa-solid fa-chevron-down"></i></button>
+                                <li class="header-navigation-mobile-item">
+                                    <button onclick="ToggleShowHide('mCollapse','header-navigation-mobile-collapse-show')">Item<i class="fa-solid fa-chevron-down"></i></button>
                                     <ul class="header-navigation-mobile-collapse" id="mCollapse">
                                         <li class="header-navigation-mobile-collapse-item"><a href="">sub item</a></li>
                                         <li class="header-navigation-mobile-collapse-item"><a href="">sub item</a></li>
@@ -45,7 +45,7 @@
                 <div class="header__main-right">
                     <ul class="header__menu">
                         <li class="header__menu-btn search">
-                            <button class="search-btn" onclick="ShowSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <button class="search-btn" onclick="ToggleShowHide('searchForm','search-show')"><i class="fa-solid fa-magnifying-glass"></i></button>
                             <div class="search-wrapper" id="searchForm">
                                 <div class="search-content">
                                     <form action="" method="get" class="search-form">
@@ -61,20 +61,20 @@
                             </div>
                         </li>
                         <li class="header__menu-btn notification">
-                            <button class="notification-btn" onclick="ShowToggle()"><i class="fa-solid fa-bell"></i></button>
-                            <ul class="notification-dropdown" id="toggle">
+                            <button class="notification-btn" onclick="ToggleShowHide('notification','notification-dropdown-show')"><i class="fa-solid fa-bell"></i></button>
+                            <ul class="notification-dropdown" id="notification">
                                 <li class="notification-dropdown-item"><a href="">Notification 1</a></li>
                                 <li class="notification-dropdown-item"><a href="">Notification 1</a></li>
                                 <li class="notification-dropdown-item"><a href="">Notification 1</a></li>   
                             </ul>
                         </li>
                         <li class="header__menu-btn cart">
-                            <button class="cart-btn" onclick="ShowCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                            <button class="cart-btn" onclick="ToggleShowHide('cart', 'cart-show')"><i class="fa-solid fa-cart-shopping"></i></button>
                             <div class="cart-sidebar" id="cart">
                                 <div class="cart-wrapper" >
                                     <div class="cart-content">
                                         <div class="cart-header">
-                                            <button class="cart-close"><i class="fa fa-times" aria-hidden="true"></i>
+                                            <button class="cart-close" onclick="HideElement('cart','cart-show')"><i class="fa fa-times" aria-hidden="true"></i>
                                             </button>
                                             <div class="cart-title">Your Cart</div>
                                         </div>
@@ -92,12 +92,12 @@
                             </div>
                         </li>
                         <li class="header__menu-btn favorite">
-                            <button class="favorite-btn" onclick="ShowFavorite()"><i class="fa-solid fa-heart"></i></button>
-                            <div class="favorite-modal" id="modal">
+                            <button class="favorite-btn" onclick="ToggleShowHide('favorite','favorite-show')"><i class="fa-solid fa-heart"></i></button>
+                            <div class="favorite-modal" id="favorite">
                                 <div class="favorite-modal-dialog">
                                     <div class="favorite-modal-content">
                                         <div class="favorite-modal-header">
-                                            <button class="favorite-modal-close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                            <button class="favorite-modal-close" onclick="HideElement('favorite','favorite-show')"><i class="fa fa-times" aria-hidden="true"></i></button>
                                             <div class="favorite-modal-title">Modal Title</div>
                                         </div>
                                         <div class="favorite-modal-body">
@@ -134,3 +134,4 @@
             </div>
         </div>
 </header>
+<script src="/javascripts/header.js"></script>

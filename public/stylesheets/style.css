@@ -264,6 +264,10 @@ header {
   visibility: hidden;
   transition: all 0.3s;
 }
+.notification-dropdown-show {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
 .notification-dropdown-item {
   padding: 12px 0 12px 20px;
 }
@@ -300,6 +304,10 @@ header {
 .favorite-modal-close:hover {
   color: #e60000;
   transition: linear 0.3s;
+}
+.favorite-show {
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .search-show {
@@ -617,7 +625,7 @@ header {
   justify-content: space-between;
 }
 .shop-top__hide-filter {
-  padding-left: 0;
+  padding-left: 0 !important;
 }
 .shop-function {
   display: flex;
@@ -638,7 +646,7 @@ header {
   display: block;
 }
 .shop-filter-hide {
-  display: none;
+  display: none !important;
 }
 .shop-list {
   display: flex;
@@ -660,10 +668,10 @@ header {
   padding-left: 100px;
 }
 .shop-right__hide-filter {
-  padding-left: 0;
+  padding-left: 0 !important;
 }
 .shop-right__hide-filter .shop-list-item {
-  width: 25%;
+  width: 25% !important;
 }
 .shop-list {
   display: flex;

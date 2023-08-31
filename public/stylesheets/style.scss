@@ -269,6 +269,10 @@ header{
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s;
+        &-show{
+            opacity: 1!important;
+            visibility: visible!important;
+        }
         &-item{
             padding: 12px 0 12px 20px;
             &:not(:last-child){
@@ -307,6 +311,10 @@ header{
                 transition: linear 0.3s;
             }
         }
+    }
+    &-show{
+        visibility: visible!important;
+        opacity: 1!important;
     } 
 }
 .search{
@@ -648,7 +656,7 @@ header{
         padding-left: 100px;
         justify-content: space-between;
         &__hide-filter{
-            padding-left: 0;
+            padding-left: 0!important;
         }
     }
     &-function{
@@ -671,7 +679,7 @@ header{
             }
         }
         &-hide{
-            display: none;
+            display: none!important;
         }
     }
     &-list{
@@ -693,9 +701,9 @@ header{
         width: 100%;
         padding-left: 100px;
         &__hide-filter{
-            padding-left: 0;
+            padding-left: 0!important;
             & .shop-list-item{
-                width: 25%;
+                width: 25%!important;
             }
         }
     }
