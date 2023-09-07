@@ -12,7 +12,96 @@
           </div>
           
         </div>
-        <div class="product-detail-information">Detail here</div>
+        <div class="product-detail-information">
+          <h5 class="product-detail__title">Title</h5>
+          <p class="product-detail__price">Price</p>
+          <form action="" method="get">
+            <div>Color</div>
+            <div class="product-detail__color">
+              <div class="product-detail__color-option active" type="radio" name="color" id="c1" value="1">
+                <img src="/images/item-front-color-1.jpg" alt="">
+              </div>
+              <div class="product-detail__color-option" type="radio" name="color" id="c1" value="1">
+                <img src="/images/item-front-color-1.jpg" alt="">
+              </div>
+              <div class="product-detail__color-option" type="radio" name="color" id="c1" value="1">
+                <img src="/images/item-front-color-1.jpg" alt="">
+              </div>
+            </div>
+            <div>Size</div>
+            <div class="product-detail__size">
+              <div class="product-detail__size-item">
+                <input class="product-detail__size-ratio" type="radio" name="size" id="s1" value="1">
+                <label class="product-detail__size-label" for="s1">Size 1</label>
+              </div>
+              <div class="product-detail__size-item">
+                <input class="product-detail__size-ratio" type="radio" name="size" id="s1" value="1">
+                <label class="product-detail__size-label" for="s1">Size 1</label>
+              </div>
+              <div class="product-detail__size-item">
+                <input class="product-detail__size-ratio" type="radio" name="size" id="s1" value="1">
+                <label class="product-detail__size-label" for="s1">Size 1</label>
+              </div>
+            </div>
+            <div class="product-detail__qty">
+              <label for="qty">Quantity</label>
+              <div class="product-detail__qty-minus">-</div>
+              <input class="product-detail__qty-input" type="number" name="qty" id="" min="1" value="1">
+              <div class="product-detail__qty-plus">+</div>
+            </div>
+            <div class="product-detail__group">
+              <button class="product-detail__btn buy" type="submit">Mua ngay</button>
+              <button class="product-detail__btn icon"><i class="fa-solid fa-cart-shopping"></i></button>
+              <button class="product-detail__btn icon"><i class="fa-solid fa-heart"></i></button>
+            </div>
+          </form>
+          <div class="product-detail__collapsible">
+            <button class="product-detail__title" onclick="ToggleShowHide('itemCollapsible', 'product-detail__text-show')"><h5>About Item</h5></button>
+            <p class="product-detail__text" id="itemCollapsible">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum unde alias odio adipisci quidem labore doloremque non, animi quisquam atque quod? Expedita aut alias, blanditiis reiciendis laborum minus temporibus quae.</p>
+          </div>
+        </div>
       </div>
     </section>
+    <section class="section">
+      <div class="section-title">Section Title</div>
+      <div class="section-content">
+        <div class="container section-wrapper">
+          <div class="recommend-list swiper">
+            <div class="recommend-list-wrapper swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="recommend-list-item">
+                  <%- include('partials/product.ejs') %>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="recommend-list-item">
+                  <%- include('partials/product.ejs') %>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="recommend-list-item">
+                  <%- include('partials/product.ejs') %>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="recommend-list-item">
+                  <%- include('partials/product.ejs') %>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="recommend-list-item">
+                  <%- include('partials/product.ejs') %>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="recommend-list-item">
+                  <%- include('partials/product.ejs') %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/javascripts/product-detail.js"></script>
 </body>

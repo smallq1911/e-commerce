@@ -1,0 +1,58 @@
+<body>
+    <div class="collection__banner">
+        <img src="/images/proposal-banner.png" alt="">
+    </div>
+    <%- include('partials/path.ejs') %>
+    <section class="section">
+        <div class="container section-wrapper">
+            <div class="collection-detail">
+                <div class="collection-detail__banner">
+                    <img src="/images/collection-main-banner.jpg" alt="">
+                </div>
+                <div class="collection-detail__part">
+                    <p class="collection-detail__text introduction">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, fugiat ab. Tempora, ratione ipsam sapiente consectetur corrupti aspernatur sed unde neque et sunt dolore, amet cumque, vero debitis quae enim.
+                    </p>
+                </div>
+                <div class="collection-detail__part">
+                    <p class="collection-detail__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, fugiat ab. Tempora, ratione ipsam sapiente consectetur corrupti aspernatur sed unde neque et sunt dolore, amet cumque, vero debitis quae enim.
+                    </p>
+                    <div class="collection-detail__img">
+                        <img src="/images/lookbook-1.png" alt="">
+                    </div>
+                </div>
+                <div class="collection-detail__part">
+                    <div class="collection-detail__img">
+                        <img src="/images/lookbook-1.png" alt="">
+                    </div>
+                    <p class="collection-detail__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, fugiat ab. Tempora, ratione ipsam sapiente consectetur corrupti aspernatur sed unde neque et sunt dolore, amet cumque, vero debitis quae enim.
+                    </p>
+                </div>
+                <div class="collection-detail-btn">
+                    <a href="">More in lookbook</a>
+                </div>
+            </div>
+            <h6>Items in collection</h6>
+            <ul class="collection-list">
+                <li class="collection-list-item">
+                    <%- include('partials/product.ejs') %>
+                </li>
+                <li class="collection-list-item">
+                    <%- include('partials/product.ejs') %>
+                </li>
+                <li class="collection-list-item">
+                    <%- include('partials/product.ejs') %>
+                </li>
+                <li class="collection-list-item">
+                    <%- include('partials/product.ejs') %>
+                </li>
+                <li class="collection-list-item">
+                    <%- include('partials/product.ejs') %>
+                </li>
+            </ul>
+            <div class="collection-detail-btn"><a href="">Get all items in collections!</a></div>
+        </div>
+    </section>
+</body>

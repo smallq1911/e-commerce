@@ -20,64 +20,16 @@
                 <div class="shop-right" id="shopList">
                     <ul class="shop-list">
                         <li class="shop-list-item">
-                            <a href="">
-                              <div class="product__img-box">
-                                <img class="product__img" id="front" src="/images/item-front.jpg" alt="">
-                                <img class="product__img" id="back" src="/images/item-back.jpg" alt="">
-                              </div>
-                              <ul class="product__color">
-                                <li class="product__color-option"></li>
-                                <li class="product__color-option"></li>
-                                <li class="product__color-option"></li>
-                              </ul>
-                              <h6 class="product__name">Name</h6>
-                              <h6 class="product__price">Price</h6>
-                            </a>
+                          <%- include('partials/product.ejs') %>
                         </li>
                         <li class="shop-list-item">
-                            <a href="">
-                              <div class="product__img-box">
-                                <img class="product__img" id="front" src="/images/item-front.jpg" alt="">
-                                <img class="product__img" id="back" src="/images/item-back.jpg" alt="">
-                              </div>
-                              <ul class="product__color">
-                                <li class="product__color-option"></li>
-                                <li class="product__color-option"></li>
-                                <li class="product__color-option"></li>
-                              </ul>
-                              <h6 class="product__name">Name</h6>
-                              <h6 class="product__price">Price</h6>
-                            </a>
+                          <%- include('partials/product.ejs') %>
                         </li>
                         <li class="shop-list-item">
-                            <a href="">
-                              <div class="product__img-box">
-                                <img class="product__img" id="front" src="/images/item-front.jpg" alt="">
-                                <img class="product__img" id="back" src="/images/item-back.jpg" alt="">
-                              </div>
-                              <ul class="product__color">
-                                <li class="product__color-option"></li>
-                                <li class="product__color-option"></li>
-                                <li class="product__color-option"></li>
-                              </ul>
-                              <h6 class="product__name">Name</h6>
-                              <h6 class="product__price">Price</h6>
-                            </a>
+                          <%- include('partials/product.ejs') %>
                         </li>
                         <li class="shop-list-item">
-                            <a href="">
-                              <div class="product__img-box">
-                                <img class="product__img" id="front" src="/images/item-front.jpg" alt="">
-                                <img class="product__img" id="back" src="/images/item-back.jpg" alt="">
-                              </div>
-                              <ul class="product__color">
-                                <li class="product__color-option"></li>
-                                <li class="product__color-option"></li>
-                                <li class="product__color-option"></li>
-                              </ul>
-                              <h6 class="product__name">Name</h6>
-                              <h6 class="product__price">Price</h6>
-                            </a>
+                          <%- include('partials/product.ejs') %>
                         </li>
                     </ul>
                 </div>
@@ -87,7 +39,7 @@
           <div class="shop-filter">
             <ul class="shop-filter-wrapper">
               <li class="shop-filter-item">
-                <button class="shop-filter-trigger" onclick="ToggleCollapse('specialOptions')">
+                <button class="shop-filter-trigger" onclick="ToggleShowHide('specialOptions', 'shop-filter-category-show')">
                   <h5 class="shop-filter-category-title">Special & Offers</h5>
                 </button>
                 <ul class="shop-filter-category" id="specialOptions">
@@ -106,7 +58,7 @@
                 </ul>
               </li>
               <li class="shop-filter-item">
-                <button class="shop-filter-trigger" onclick="ToggleCollapse('priceOptions')">
+                <button class="shop-filter-trigger" onclick="ToggleShowHide('priceOptions','shop-filter-category-show')">
                   <h5 class="shop-filter-category-title">Shop by Price</h5>
                 </button>
                 <ul class="shop-filter-category" id="priceOptions">
@@ -125,7 +77,7 @@
                 </ul>
               </li>
               <li class="shop-filter-item">
-                <button class="shop-filter-trigger" onclick="ToggleCollapse('collectionOptions')">
+                <button class="shop-filter-trigger" onclick="ToggleShowHide('collectionOptions','shop-filter-category-show')">
                   <h5 class="shop-filter-category-title">Collection</h5>
                 </button>
                 <ul class="shop-filter-category" id="collectionOptions">
@@ -144,7 +96,7 @@
                 </ul>
               </li>
               <li class="shop-filter-item">
-                <button class="shop-filter-trigger" onclick="ToggleCollapse('topwearOptions')">
+                <button class="shop-filter-trigger" onclick="ToggleShowHide('topwearOptions','shop-filter-category-show')">
                   <h5 class="shop-filter-category-title">Topwear</h5>
                 </button>
                 <ul class="shop-filter-category" id="topwearOptions">
@@ -171,7 +123,7 @@
                 </ul>
               </li>
               <li class="shop-filter-item">
-                <button class="shop-filter-trigger" onclick="ToggleCollapse('bottomwearOptions')">
+                <button class="shop-filter-trigger" onclick="ToggleShowHide('bottomwearOptions','shop-filter-category-show')">
                   <h5 class="shop-filter-category-title">Bottomwear</h5>
                 </button>
                 <ul class="shop-filter-category" id="bottomwearOptions">
@@ -194,7 +146,7 @@
                 </ul>
               </li>
               <li class="shop-filter-item">
-                <button class="shop-filter-trigger" onclick="ToggleCollapse('accessoriesOptions')">
+                <button class="shop-filter-trigger" onclick="ToggleShowHide('accessoriesOptions','shop-filter-category-show')">
                   <h5 class="shop-filter-category-title">Accessories</h5>
                 </button>
                 <ul class="shop-filter-category" id="accessoriesOptions">
@@ -217,7 +169,7 @@
                 </ul>
               </li>
               <li class="shop-filter-item">
-                <button class="shop-filter-trigger" onclick="ToggleCollapse('shoesOptions')">
+                <button class="shop-filter-trigger" onclick="ToggleShowHide('shoesOptions','shop-filter-category-show')">
                   <h5 class="shop-filter-category-title">Shoes</h5>
                 </button>
                 <ul class="shop-filter-category" id="shoesOptions">
@@ -236,7 +188,7 @@
                 </ul>
               </li>
               <li class="shop-filter-item">
-                <button class="shop-filter-trigger" onclick="ToggleCollapse('colorOptions')">
+                <button class="shop-filter-trigger" onclick="ToggleShowHide('colorOptions','shop-filter-category-show')">
                   <h5 class="shop-filter-category-title">Colors</h5>
                 </button>
                 <ul class="shop-filter-category" id="colorOptions">
@@ -255,7 +207,7 @@
                 </ul>
               </li>
               <li class="shop-filter-item">
-                <button class="shop-filter-trigger" onclick="ToggleCollapse('sizeOptions')">
+                <button class="shop-filter-trigger" onclick="ToggleShowHide('sizeOptions','shop-filter-category-show')">
                   <h5 class="shop-filter-category-title">Sizes</h5>
                 </button>
                 <ul class="shop-filter-category" id="sizeOptions">
